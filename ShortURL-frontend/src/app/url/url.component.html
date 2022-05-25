@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="id01" class="modal" style="display: block;">
+
+  <div class="modal-content">
+    <form method="post" style="width:80%">
+
+      <div class="container1">
+        <input class="form-control" [(ngModel)]="longURL" type="text" placeholder="Shorten your link" name="url" required>
+        <button type="submit" (click)="shortenURL()">Shorten</button>
+      </div>
+    </form>
+    
+    <br>
+
+    <div>
+      <div id="shortURL"><a href="{{shortURL}}"> {{shortURL}} </a></div>
+      <button (click)="copyText()">Copy</button>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>
